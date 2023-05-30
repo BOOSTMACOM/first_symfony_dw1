@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PostController!{% endblock %}
+{% block title %}Hello CategoryController!{% endblock %}
 
 {% block body %}
 <style>
@@ -9,12 +9,11 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Articles</h1>
+    <h1>{{ category.name }}</h1>
 
-    {% for post in posts %}
+    {% for post in category.posts %}
     <div>
         <h2>{{ post.title }}</h2>
-        <small>{{ post.category.name }}</small>
     </div>
     {% endfor %}
 </div>
